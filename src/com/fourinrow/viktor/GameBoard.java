@@ -7,30 +7,19 @@ public class GameBoard {
     public static void printBoard(char[][] arr, int rows, int colums) {
 
         for (int i = 0; i < rows; i++) {
-
             for (int j = 0; j < colums; j++) {
-
                 if (arr[i][j] == 0) {
-
                     System.out.print(" | " + "   " + " |");
-
                 } else {
 
                     System.out.print(" | " + " " + arr[i][j] + " " + " |");
-
                 }
-
             }
-
             System.out.println();
-
         }
-
         System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - ");
-
         System.out.println(" | " + " 1 " + " |" + " | " + " 2 " + " |" + " | " + " 3 " + " |" + " | " + " 4 " + " |"
                 + " | " + " 5 " + " |" + " | " + " 6 " + " |" + " | " + " 7 " + " |");
-
     }
 
     public static char[][] userTurn(char[][] arr, int userInput, int turn) {
@@ -41,7 +30,7 @@ public class GameBoard {
 
             for (int i = rows - 1; i >= 0; i--) {
 
-                if (arr[i][userInput] == 0) {
+				if (arr[i][userInput] == 0) {
 
                     arr[i][userInput] = 'X';
                     i = 0;

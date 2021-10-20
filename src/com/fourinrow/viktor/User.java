@@ -9,16 +9,17 @@ public class User {
 
     public static int userInput(int player) {
 
+    	
         int user = 0;
         boolean cont = true;
-
+        
         System.out.println();
-        System.out.println("\t\tPlayer" + player + " turn");
+        System.out.println("\t\tPlayer " + player + " turn");
 
         do {
 
             try {
-
+            	
                 user = scan.nextInt();
 
                 if (user < 1 || user > 7) {
@@ -28,6 +29,7 @@ public class User {
 
                 } else {
                     cont = false;
+                    scan.nextLine();
 
                 }
             } catch (InputMismatchException ex) {
@@ -39,6 +41,7 @@ public class User {
 
         } while (cont);
 
+       
         return user - 1;
 
     }
