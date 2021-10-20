@@ -10,15 +10,15 @@ public class Main {
         boolean win = false;
         char[][] gameBoard = new char[6][7];
 
-        System.out.println("\t\t-WELCOME TO FOUR IN A ROW!-");
-        System.out.println("\t\t---------------------------\n");
+        System.out.println("\t\t-WELCOME TO CONNECT 4!-");
+        System.out.println("\t\t-----------------------\n");
 
         do {
 
             GameBoard.printBoard(gameBoard, rows, colums);
 
             userInput = User.userInput(playerTurn);
-
+            
             gameBoard = GameBoard.userTurn(gameBoard, userInput, playerTurn);
             GameBoard.printBoard(gameBoard, rows, colums);
 
@@ -31,7 +31,7 @@ public class Main {
 
         System.out.println("\n ********************************************************");
         System.out.println("\t\tWE HAVE A WINNER!");
-        System.out.println("\t\tPlayer" + playerTurn + " won the game!");
+        System.out.println("\t\tPlayer " + playerTurn + " won the game!");
 
     }
 }
