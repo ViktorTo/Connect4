@@ -13,14 +13,16 @@ public class Main {
         System.out.println("\t\t-WELCOME TO CONNECT 4!-");
         System.out.println("\t\t-----------------------\n");
 
+        GameBoard.printBoard(gameBoard, rows, colums); 
         do {
 
-            GameBoard.printBoard(gameBoard, rows, colums);
+            
 
             userInput = User.userInput(playerTurn);
             
             gameBoard = GameBoard.userTurn(gameBoard, userInput, playerTurn);
             
+            GameBoard.printBoard(gameBoard, rows, colums);
 
             playerTurn = (playerTurn == 1) ? 2 : 1;
             win = (GameBoard.checkWinO(gameBoard) || GameBoard.checkWinX(gameBoard)) ? true : false;
